@@ -8,6 +8,12 @@ html {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 * {

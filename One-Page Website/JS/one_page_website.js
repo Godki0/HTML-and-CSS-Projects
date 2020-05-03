@@ -1,3 +1,8 @@
+window.addEventListener('load',
+function load(){
+    window.removeEventListener('load', load, false);
+    document.body.classList.remove('fade-out');
+}, false);
 // Open the modal
 function openModal() {
     document.getElementById("myModal").style.display = "block";

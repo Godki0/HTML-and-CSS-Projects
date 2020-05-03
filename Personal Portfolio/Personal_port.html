@@ -6,18 +6,34 @@
         <meta charset="UTF-8">
         <title>Braydon Burrows </title>
         <link rel="stylesheet" type="text/css" href="./CSS/personal_port.css">
+        <script src="./JS/Personal_Port.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- We use a little bit of jQuery on this site now -->
     </head>
 
 <!-- Body -->
 <body class="Background">
+<!-- Fade in effect -->
+<!-- This script and function controls our fade in effect -->
+<script> 
+    document.body.className += ' fade-out';
+        $(function() {
+            $('body').removeClass('fade-out');
+        }
+    );
+
+</script>
 
     <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">#Slideshow</a> <!-- This is a new section -->
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()">Contact</a> <!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
         </div>
+
+        <!-- This allows us to close the form when we click outside the navbar and first heading -->
+    <div class="btn cancel" onclick="closeForm()">
 
 <!-- Home -->
         <br> <!-- Breaks inserted to add spacing between navbar and first heading -->
@@ -72,6 +88,7 @@
               <br><br>  <a href="https://github.com/Godki0" target="_blank"><img src="./image/GitHub.png" alt="GitHub"></a>
             </div>
         </div>
+        </div>
 
 <!-- Contact section -->
         <div class="Row" id="Contact">
@@ -91,7 +108,7 @@
                             <input type="submit" value="submit">
                     </form>
             </div>
-        </div>
+     </div>
 
 <!-- Footer secton -->
         <footer>
